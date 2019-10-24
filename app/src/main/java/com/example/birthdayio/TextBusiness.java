@@ -67,7 +67,7 @@ public class TextBusiness {
             Person person = new Person(name);
 
             Cursor cursor = cr.query(ContactsContract.Contacts.CONTENT_URI, null,
-                    "DISPLAY_NAME = '" + name + "'", null, null);
+                    "DISPLAY_NAME = \"" + name + "\"", null, null);
 
             if (cursor != null && cursor.moveToFirst()) {
                 String contactId =
