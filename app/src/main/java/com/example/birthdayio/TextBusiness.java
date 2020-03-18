@@ -37,7 +37,7 @@ public class TextBusiness {
         for (Person person: people) {
             String destination = getDestination(person);
 //            destination = "+1 571 290 1731"; // used for testing
-            String message = "Happy Birthday, " + person.getFirstName() + "!";
+            String message = "Happy Birthday " + person.getFirstName() + "!";
             SmsManager smsManager = SmsManager.getDefault();
             smsManager.sendTextMessage(destination, null, message, null, null);
         }
